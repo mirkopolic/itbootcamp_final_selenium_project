@@ -1,4 +1,4 @@
-# itbootcamp_final_selenium_project
+# - Završni Selenium projekat -
 
 [![Author](http://img.shields.io/badge/author-@mirkopolic-blue.svg?style=flat-square)](https://twitter.com/mirkopolic)
 

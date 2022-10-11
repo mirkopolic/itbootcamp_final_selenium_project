@@ -33,9 +33,9 @@ public abstract class BasicTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        loginPage = new LoginPage(driver, wait);
-        navPage = new NavPage(driver,wait);
-        signupPage = new SignupPage(driver,wait);
+        loginPage = new LoginPage(driver);
+        navPage = new NavPage(driver);
+        signupPage = new SignupPage(driver);
         citiesPage = new CitiesPage(driver,wait);
         messagePopUpPage = new MessagePopUpPage(driver,wait);
     }

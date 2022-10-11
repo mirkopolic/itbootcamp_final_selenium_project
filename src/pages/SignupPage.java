@@ -3,17 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignupPage {
 	
 	private WebDriver driver;
-	@SuppressWarnings("unused")
-	private WebDriverWait wait; 
 	
-	public SignupPage(WebDriver driver, WebDriverWait wait) {
+	public SignupPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = wait;
 	}
 	
 	public WebElement getNameInput() {

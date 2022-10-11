@@ -16,30 +16,35 @@ public class MessagePopUpPage {
 		this.wait = wait;
 	}
 
-	public void waitForPopUpToBeVisible() {
+	public void waitForErrorPopUpToBeVisible() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error")));
 	}
 	
-	public WebElement getTextFromPopUpDialog() {
+	public WebElement getTextFromErrorPopUpDialog() {
 		return driver.findElement(By.xpath("//*[contains(@class, 'error')]//ul/li"));
 	}
-
+	
 	public WebElement getCloseButton() {
 		return driver.findElement(By.xpath("//*[contains(text(), 'Close')]/.."));
 	}
-
-	public void waitForVerifyYourAccountPopUpToBeVisible() {
+	public void waitSuccessfullySavedPopUpToBeVisible() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'Saved successfully')]")));
+	}
+	
+	public WebElement getTextFromSuccessfullySavedPopUpDialog() {
+		return this.driver.findElement(By.xpath("//div[contains(text(), 'Saved successfully')]"));
+	}
+		
+	public void waitVerifyAccountPopUpToBeVisible() {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("dlgVerifyAccount")));
 	}
 
 	public WebElement getTextFromVerifyAccountPopUpDialog() {
-		return driver.findElement(By.xpath("//*[text()=' IMPORTANT: Verify your account ']"));
+		return driver.findElement(By.className("dlgVerifyAccount"));
 	}
 
 	public WebElement getVerifyAccountCloseButton() {
 		return driver.findElement(By.className("btnClose"));
 	}
-
-	
-	
+		
 }

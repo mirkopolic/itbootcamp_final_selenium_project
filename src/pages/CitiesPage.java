@@ -16,7 +16,7 @@ public class CitiesPage {
 		this.wait = wait;
 	}
 	
-	public WebElement getNewItemBtn () {
+	public WebElement getNewItemButton () {
 		return driver.findElement(By.className("btnNewItem"));
 	}
 	
@@ -28,32 +28,36 @@ public class CitiesPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dlgNewEditItem")));
 	}
 	
+	public WebElement getNewEditDialogInput() {
+		return this.driver.findElement(By.name("name"));
+	}
+	
+	public WebElement getSaveNewDialogButton () {
+		return driver.findElement(By.className("btnSave"));
+	}
+			
 	public void waitForDeleteDialog () {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Do you really want to delete this item?']/../..")));
 	}
-	
-	public WebElement getSaveNewDialogBtn () {
-		return driver.findElement(By.className("btnSave"));
-	}
-	
-	public WebElement getDeleteDialogBtn () {
+		
+	public WebElement getDeleteDialogButton () {
 		return driver.findElement(By.xpath("//*[text()=' Delete ']/.."));
 	}
 	
 	public void waitForNumbersOfCitiesToBe ( int rows) {
-		wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//*[contains(@class, 'v-data-table__wrapper')]//tbody/tr"), rows));
+		wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//table/tbody//tr"), rows));
 	}
 	
 	public WebElement getCellFromRow(int row, int col) {
-		return driver.findElement(By.xpath("//*[contains(@class, 'v-data-table__wrapper')]//tbody/tr["+row+"]/td["+col+"]"));
+		return driver.findElement(By.xpath("//table/tbody//tr["+row+"]/td["+col+"]"));
 	}
 	
-	public WebElement getEditBtnFromRow(int row) {
-		return driver.findElement(By.xpath("//*[contains(@class, 'v-data-table__wrapper')]//tbody/tr["+row+"]//*[@id='edit']"));
+	public WebElement getEditButtonFromRow(int row) {
+		return driver.findElement(By.xpath("//table/tbody//tr[\" + (row) + \"]//button[@id='edit']"));
 	}
 	
-	public WebElement getDeleteBtnFromRow(int row) {
-		return driver.findElement(By.xpath("//*[contains(@class, 'v-data-table__wrapper')]//tbody/tr["+row+"]//*[@id='delete']"));
+	public WebElement getDeleteButtonFromRow(int row) {
+		return driver.findElement(By.xpath("//table/tbody//tr["+row+"]//*[@id='delete']"));
 	}
 	
 

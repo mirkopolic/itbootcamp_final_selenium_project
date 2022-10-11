@@ -3,17 +3,14 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class NavPage {
 	
 	private WebDriver driver;
-	@SuppressWarnings("unused")
-	private WebDriverWait wait; 
 	
-	public NavPage(WebDriver driver, WebDriverWait wait) {
+	public NavPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = wait;
 	}
 	
 	public WebElement getHomeLink() {
@@ -72,5 +69,8 @@ public class NavPage {
 		return driver.findElement(By.className("btnCN"));
 	}
 	
+	public WebElement getHeader() {
+		return driver.findElement(By.tagName("h1"));
+	}
 	
 }

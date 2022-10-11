@@ -61,10 +61,10 @@ public class LoginTests extends BasicTest {
 		loginPage.getPasswordInput().sendKeys("password123");
 		loginPage.getLoginButton().click();
 
-		messagePopUpPage.waitForPopUpToBeVisible();
+		messagePopUpPage.waitForErrorPopUpToBeVisible();
 
 		Assert.assertTrue(messagePopUpPage
-				.getTextFromPopUpDialog()
+				.getTextFromErrorPopUpDialog()
 				.getText()
 				.equals("User does not exists"),
 				"ERROR: Message should be  - 'User does not exist'");
@@ -93,10 +93,10 @@ public class LoginTests extends BasicTest {
 		loginPage.getPasswordInput().sendKeys("password123");
 		loginPage.getLoginButton().click();
 
-		messagePopUpPage.waitForPopUpToBeVisible();
+		messagePopUpPage.waitForErrorPopUpToBeVisible();
 
 		Assert.assertTrue(messagePopUpPage
-				.getTextFromPopUpDialog()
+				.getTextFromErrorPopUpDialog()
 				.getText()
 				.equals("Wrong password"),
 				"ERROR: Message should be  - 'Wrong password'");

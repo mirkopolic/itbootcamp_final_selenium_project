@@ -32,5 +32,4 @@ public class SignupPage {
 		return driver.findElement(By.xpath("//button[@type = 'submit']"));
 	}
 	
-
 }

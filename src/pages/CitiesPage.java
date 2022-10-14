@@ -59,6 +59,5 @@ public class CitiesPage {
 	public WebElement getDeleteButtonFromRow(int row) {
 		return driver.findElement(By.xpath("//table/tbody//tr["+row+"]//*[@id='delete']"));
 	}
-	
 
 }

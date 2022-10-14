@@ -175,7 +175,6 @@ public class AdminCitiesTests extends BasicTest {
 				.getText()
 				.contains("Deleted successfully"),
 				"ERROR: Message should contain 'Deleted successfully'");
-		
 	}
 			
 }

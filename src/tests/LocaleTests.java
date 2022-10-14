@@ -64,4 +64,5 @@ public class LocaleTests extends BasicTest{
 				.equals("Page d'atterrissage"),
 				"ERROR: Header should contain 'Page d'atterrissage'");
 	}
+	
 }

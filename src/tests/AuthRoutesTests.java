@@ -54,4 +54,5 @@ public class AuthRoutesTests extends BasicTest{
 				driver.getCurrentUrl().contains("/login"),
 				"ERROR: Url should contain '/login'");
 	}
+	
 }

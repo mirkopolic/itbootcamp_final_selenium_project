@@ -47,4 +47,5 @@ public class MessagePopUpPage {
 		return driver.findElement(By.className("btnClose"));
 	}
 		
+	
 }

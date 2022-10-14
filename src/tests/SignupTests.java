@@ -118,4 +118,5 @@ public class SignupTests extends BasicTest {
 		navPage.getLogoutButton().click();
 	}
 	
+	
 }

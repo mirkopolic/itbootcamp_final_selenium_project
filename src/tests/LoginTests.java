@@ -142,4 +142,5 @@ public class LoginTests extends BasicTest {
 		navPage.getLogoutButton().click();
 	}
 
+	
 }

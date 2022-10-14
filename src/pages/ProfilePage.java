@@ -24,6 +24,5 @@ public class ProfilePage {
 	public WebElement getLogoutButton() {
 		return driver.findElement(By.className("btnLogout"));
 	}
-			
-	
+		
 }
